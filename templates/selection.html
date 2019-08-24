@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <!-- Required meta tags -->
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="/static/upload.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+      integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="icon" href="/static/img/favicon.png" type="image/png" />
+    <title>Molecular Networking Parameter Optimisation</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/vendors/linericon/style.css" />
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="/static/vendors/owl-carousel/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/vendors/nice-select/css/nice-select.css"
+    />
+    <link rel="stylesheet" href="/static/vendors/animate-css/animate.css" />
+    <link rel="stylesheet" href="/static/vendors/popup/magnific-popup.css" />
+    <link rel="stylesheet" href="/static/vendors/swiper/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="/static/vendors/scroll/jquery.mCustomScrollbar.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+  </head>
+
+  <body>
+      
+      <div id="loading"></div>
+      <div id="content">
+    <!--================Offcanvus Menu Area =================-->
+    <div class="side_menu">
+      <a class="logo" href="#">
+        <img src="\static\img\banner\logo-menu.png" alt="" />
+      </a>
+      <ul class="list menu_right">
+        <li>
+          <a href="{{ url_for('index') }}">Home</a>
+        </li>
+        <li>
+          <a href="{{ url_for('about') }}">About</a>
+        </li>
+      </ul>
+    </div>
+    <!--================End Offcanvus Menu Area =================-->
+
+    <!--================Header Menu Area =================-->
+    <header class="header_area home_menu">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="{{ url_for('index') }}">
+              <img src="static\img\banner\logo.png" alt="" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+    <!--================Canvus Menu Area =================-->
+    <div class="canvus_menu">
+      <div class="container">
+        <div class="float-right">
+          <div class="toggle_icon">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--================End Canvus Menu Area =================-->
+
+    <!--================ Selection Area =================-->
+    <section>
+      <!--================ Grid for combobox =================-->
+      <!-- <p></p>
+      <p style="color: #fff">sdfg</p>
+      <p></p>
+      <p style="color: #fff">sdfg</p>
+
+      <div class="container">
+        <div class="page-header">
+          <h3>
+            Please select the parameters you want to optimize.
+          </h3>
+        </div>
+        <div class="row grid-divider">
+          <div class="col-sm-4">
+            <div class="col-padding">
+              <select>
+                <option selected>Parameter</option>
+                <option>Minimum number of matched peaks</option>
+                <option>ms2 tolerance</option>
+                <option>min ms2 intensity</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="col-padding">
+              <select>
+                <option selected>Parameter</option>
+                <option>Minimum number of matched peaks</option>
+                <option>MS2 tolerance</option>
+                <option>Minimum ms2 intensity</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="col-padding">
+              <select>
+                <option selected>Parameter</option>
+                <option>Minimum number of matched peaks</option>
+                <option>ms2 tolerance</option>
+                <option>min ms2 intensity</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- <section>
+      <div class="container">
+        <div class="page-header"></div>
+        <div class="row grid-divider">
+          <div class="col-sm-4">
+            <div class="col-padding">
+              <p></p>
+              <p style="color: #fff">sdfg</p> -->
+
+              <!--================Start button =================-->
+
+              <!-- <form name="Form1" action="/my-link"  enctype=multipart/form-data  onclick="loading();" >
+                <input
+                  class="btn submit_btn form-control"
+                  type="submit"
+                  value="START"
+                />
+              </form> -->
+
+                  
+                      <!-- <h3>Type anything:</h3>
+                      <p>
+                      <form action="." method="POST">
+                          <input type="text" name="anything" placeholder="Type anything here">
+                          <input type="submit" name="anything_submit" value="Submit" onclick="loading();">
+                      </form>
+                      </p> -->
+<!--                       
+                      <form name="Form1" action="/my-link"  enctype=multipart/form-data method="POST"   >
+                        <input
+                          class="btn submit_btn form-control"
+                          type="submit"
+                          value="START"
+                          onclick="loading();"
+                        /> -->
+
+                        <style>
+                       .myForm input {
+	                      text-align:text;
+                          }
+                        
+                        </style>
+                        
+                        <form action="/my-link"  enctype=multipart/form-data method="POST">
+                          
+
+                          <!-- Primera selección de parametros empieza aqui -->
+                          <div class="container">
+                              <div class="page-header">
+                                
+                                
+                                        <p style="color: #fff">sdfg</p><p></p>
+
+                                        <h4>
+                                            Select values for Minimum MS2 intensity.
+                                          </h4>
+                              </div>
+                              <div class="row grid-divider">
+                                <div class="col-sm-4">
+                                  <div class="col-padding">
+                                      <input name="text" placeholder="Start"/>
+                                  </div>
+                                </div>
+                                <div class="col-sm-4">
+                                  <div class="col-padding">
+                                      <input name="text1" placeholder="Stop" />
+                                  </div>
+                                </div>
+                                <div class="col-sm-4">
+                                  <div class="col-padding">
+                                      <input name="text2" placeholder="Step" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+
+                          <!-- Primer selección de parametros termina aqui -->
+
+
+                          <!-- Seguknda seleccion de paramtros empieza aqui -->
+
+
+                          <div class="container">
+                              <div class="page-header">
+                                  <h4>
+                                    Select values for the minimum number of matched peaks.
+
+                                    </h4>
+                              </div>
+                              <div class="row grid-divider">
+                                <div class="col-sm-4">
+                                  <div class="col-padding">
+                                      <input name="text3" placeholder="Separate values with ' , '3"/>
+                                  </div>
+                                </div>
+                                <div >
+                                  <div >
+                                  </div>
+                                </div>
+                                <div >
+                                  <div >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+
+
+                          <!-- Segunda seleccion de parametros termina aqui -->
+
+                          <!-- Tercera seleccion de paramteros empieza aqui -->
+
+
+                          <div class="container">
+                              <div class="page-header">
+                                  <h4>
+                                      Select values for MZ tolerance. 
+
+                                    </h4>
+                              </div>
+                              <div class="row grid-divider">
+                                <div class="col-sm-4">
+                                  <div class="col-padding">
+                                    <input name="text6" placeholder="Separate values with ' , ' " />
+                                  </div>
+                                </div>
+                               
+                                
+                              </div>
+                            </div>
+                          </section>
+                          <!-- Tercera seleccion de parametros termina aqui -->
+
+                            <!-- caja para el boton  -->
+                            <div class="container">
+                                
+                                <div >
+                                  <div class="col-sm-4">
+                                    <div class="col-padding">
+                                        <p></p>
+                                        <p style="color: #fff">sdfg</p>
+                                        
+                                        <input type="submit"  value="START" class="btn submit_btn form-control" onclick="loading();"/>
+
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4">
+                                    <div class="col-padding">
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4">
+                                    <div class="col-padding">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            <!-- caja para el boton termina -->
+                         
+                            
+                        </form>
+
+
+
+                        <style>@media ( min-width: 768px ) {
+                            .grid-divider {
+                                position: relative;
+                                padding: 0;
+                            }
+                            .grid-divider>[class*='col-'] {
+                                position: static;
+                            }
+                            .grid-divider>[class*='col-']:nth-child(n+2):before {
+                                content: "";
+                                border-left: 1px solid #DDD;
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                            }
+                            .col-padding {
+                                padding: 0 15px;
+                            }
+                        }</style>
+                        
+                      </form>
+                      <script type="text/javascript">// <![CDATA[
+                        function loading(){
+                            $("#loading").show();
+                            $("#content").hide();  
+                            $("#formImg").show();    
+
+                            // Send data from text box
+                            //document.forms["text"].submit();
+
+
+                            document.getElementById('my').style.visibility='visible'; 
+
+                            var intervalID = setInterval(update_values,10000);
+
+
+                            function update_values() {
+                                  $.getJSON($SCRIPT_ROOT + '/_stuff',
+                 
+                                function(data) {
+                                $('#result').text(data.result);
+                                console.log(data)
+                                });
+        
+                                };
+  
+
+
+                        }
+                // ]]></script>
+                    
+  
+                  <div>  </div>
+      
+            <style>
+          div#loading {
+          width: 35px;
+          height: 35px;
+          display: none;
+          background: url(\static\img\wait.gif) no-repeat;
+          cursor: wait;
+    }
+          </style> 
+
+          
+          
+
+
+              
+
+            <!-- </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="col-padding"></div>
+
+          </div>
+          <div class="col-sm-4">
+            <div class="col-padding"></div>
+          </div>
+        </div> -->
+      
+        <!-- <img src ="\static\img\wait.gif" id="my" width="310" height="392" style="position: absolute; top:92px; left:375px; visibility:hidden"/>
+        <script type="text/javascript">
+          function tend() {
+            document.getElementById('my').style.visibility='visible';
+          }
+          
+        </script>
+        <input type="button" onclick="tend()" value="back"> -->
+
+        
+        
+      
+
+    </section>
+    <!-- <igm src="\static\img\wait.gif" id="formImg" style="display:none;" /> -->
+
+    <p></p>
+    <p style="color: #fff">sdfg</p>
+    <p></p>
+    <p style="color: #fff">sdfg</p>
+
+    <!--================End About Area =================-->
+
+    <!--================ Start footer Area  =================-->
+    <footer class="footer-area p_120">
+      <div class="container">
+        <div
+          class="row footer-bottom d-flex justify-content-between align-items-center"
+        >
+          <ul class="list" style="color: #fff;">
+            <li>
+              <a
+                >This web application was built by The School of Computing
+                Science - University of Glasgow</a
+              >
+            </li>
+            <li>
+              <a> All rights reserved | 2019</a>
+            </li>
+          </ul>
+
+          <div class="col-lg-4 col-md-4 footer-social">
+            <a href="https://www.facebook.com/UofGlasgow/">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/UofGlasgow">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/popper.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/stellar.js"></script>
+    <script src="/static/js/jquery.lightbox.js"></script>
+    <script src="/static/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="/static/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/vendors/isotope/isotope-min.js"></script>
+    <script src="/static/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/static/vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="/static/vendors/counter-up/jquery.counterup.js"></script>
+    <script src="/static/js/mail-script.js"></script>
+    <script src="/static/vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="/static/vendors/swiper/js/swiper.min.js"></script>
+    <script src="/static/vendors/scroll/jquery.mCustomScrollbar.js"></script>
+    <script src="/static/js/theme.js"></script>
+  </div>
+  <!-- <img src ="\static\img\wait.gif" id="my" width="310" height="392" style="position: absolute; top:92px; left:375px; visibility:hidden"/> -->
+
+  <div  id="my" style= "visibility:hidden">
+
+
+
+    <script type="text/javascript"
+  src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+  var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+
+<script type="text/javascript">
+  // var intervalID = setInterval(update_values,1000);
+  
+  //    function update_values() {
+  //          $.getJSON($SCRIPT_ROOT + '/_stuff',
+                 
+  //        function(data) {
+  //          $('#result').text(data.result);
+  //          console.log(data)
+  //        });
+        
+  //      };
+     
+      
+     
+      
+  </script>
+  
+      <span id="result">?</span>
+  <script>
+  document.getElementById("result").innerHTML;
+  </script>
+
+
+    <div class="loader" >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h1 style="color: #212121e0">Please wait </h1>
+      
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background: #fff;
+        }
+        h1 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: -1;
+          font-size: 70px;
+          transform: translate(-50%, -50%);
+          color: #fff;
+        }
+        .loader {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          height: 10px;
+          text-align: center;
+        }
+        .loader span {
+          width: 30px;
+          height: 30px;
+          background: #fff;
+          display: inline-block;
+          border-radius: 50%;
+          animation: animate 2s linear infinite;
+          opacity: 0;
+        }
+        .loader span:nth-child(1) {
+          animation-delay: 0.8s;
+          background: #cc0000ff;
+        }
+        .loader span:nth-child(2) {
+          animation-delay: 0.4s;
+          background: #cc0000ff;
+        }
+        .loader span:nth-child(3) {
+          animation-delay: 0.2s;
+          background: #cc0000ff;
+        }
+      
+        @keyframes animate {
+          0% {
+            transform: translateX(-200px);
+            opacity: 0;
+          }
+          25% {
+            transform: translateX(-100px);
+            opacity: 1;
+          }
+          50% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          75% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(100px);
+            opacity: 0;
+          }
+          90% {
+            transform: translateX(100px);
+            opacity: 0;
+          }
+        }
+      </style>
+      
+
+
+</div>
+
+
+
+
+</body>
+</html>

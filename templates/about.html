@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="/static/img/favicon.png" type="image/png" />
+    <title>Molecular Networking Parameter Optimisation</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/vendors/linericon/style.css" />
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="/static/vendors/owl-carousel/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/vendors/nice-select/css/nice-select.css"
+    />
+    <link rel="stylesheet" href="/static/vendors/animate-css/animate.css" />
+    <link rel="stylesheet" href="/static/vendors/popup/magnific-popup.css" />
+    <link rel="stylesheet" href="/static/vendors/swiper/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="/static/vendors/scroll/jquery.mCustomScrollbar.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+  </head>
+
+  <body>
+    <!--================Offcanvus Menu Area =================-->
+    <div class="side_menu">
+      <a class="logo" href="#">
+        <img src="\static\img\banner\logo-menu.png" alt="" />
+      </a>
+      <ul class="list menu_right">
+        <li>
+          <a href="{{ url_for('index') }}">Home</a>
+        </li>
+        <li>
+          <a href="{{ url_for('about') }}">About</a>
+        </li>
+      </ul>
+    </div>
+    <!--================End Offcanvus Menu Area =================-->
+
+    <!--================Header Menu Area =================-->
+    <header class="header_area home_menu">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="{{ url_for('index') }}">
+              <img src="static\img\banner\logo.png" alt="" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+    <!--================Canvus Menu Area =================-->
+    <div class="canvus_menu">
+      <div class="container">
+        <div class="float-right">
+          <div class="toggle_icon">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--================End Canvus Menu Area =================-->
+
+    <!--================ About Area =================-->
+    <section class="menu_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="main_title position-relative">
+              <h1>About</h1>
+              <hr />
+              <div class="round-planet planet">
+                <div class="round-planet planet2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row menu_inner">
+          <div class="col-md-12 col-lg-10 col-xl-6">
+            <div>
+              <ul class="list">
+                <li>
+                    <p></p>
+                    
+
+                  <h4>
+                    Mass Spectrometry
+                  </h4>
+                  <p></p>
+                  <p align="justify">
+                    Mass Spectrometry allows an accurate measurement of the mass
+                    of different molecules within a sample. Proteins which
+                    account for large biomolecules, are identifiable by mass.
+                    Thanks to Mass Spectrometry, it is possible to identify
+                    molecules in a mixture, detect impurities in a sample,
+                    analyze a purified protein, or study the protein content of
+                    a sample of cells. 
+                    <p></p>
+                    Mass Spectrometry, fragments molecules based on their 
+                    chemical properties in the gas phase. Then,two related 
+                    molecules are likely to display similar fragments of ion spectra. 
+                    <p></p>
+
+                    Molecular networking utilizes the chemistry 
+                    of molecules to organize the data as a relational
+                    spectral network. This data organizational tool is applicable
+                    across diverse fields such as; the discovery of therapeutic leads, 
+                    monitoring drug metabolism, clinical diagnostics, and emerging
+                    applications in precision medicine. [1]
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-10 col-xl-6">
+            <div>
+              <ul class="list">
+                <li>
+                    <p></p>
+
+                  <h4>
+                    Molecular Networking
+                  </h4>
+                  <p></p>
+
+                  <p align="justify">
+                    Molecular Networking utilizes filtering steps to make a
+                    clear separation between MS2 spectra clusters. In this
+                    process, only the most relevant similar scores are selected.
+                    According to the filtering values selected, some scores are
+                    arbitrarily deleted and part of the information is ignored.
+                    The selection of these values requires time- consuming
+                    parameters optimization.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End About Area =================-->
+
+    <!--================ Team Area =================-->
+    <section class="menu_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="main_title position-relative">
+              <h1>Team</h1>
+              <p></p>
+
+              <hr />
+              <div class="round-planet planet">
+                <div class="round-planet planet2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row menu_inner">
+          <div class="container">
+            <div class="testi_slider owl-carousel">
+              <div class="item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="/static/img/testimonials/testi-1.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="testi_text">
+                      <h4></h4>
+                      <h5>Web Developer, Google</h5>
+                      <p>
+                        “Who are in extremely love with eco friendly system.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.”
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="/static/img/testimonials/testi-1.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="testi_text">
+                      <h4>Researchers name</h4>
+                      <h5>Web Developer, Google</h5>
+                      <p>
+                        “Who are in extremely love with eco friendly system.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.”
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="/static/img/testimonials/testi-1.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="testi_text">
+                      <h4>Researchers name</h4>
+                      <h5>Web Developer, Google</h5>
+                      <p>
+                        “Who are in extremely love with eco friendly system.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.”
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Team Area =================-->
+
+    <!--================ Start footer Area  =================-->
+    <footer class="footer-area p_120">
+      <div class="container">
+        <div
+          class="row footer-bottom d-flex justify-content-between align-items-center"
+        >
+          <ul class="list" style="color: #fff;">
+            <li>
+              <a
+                >This web application was built by The School of Computing
+                Science - University of Glasgow</a
+              >
+            </li>
+            <li>
+              <a> All rights reserved | 2019</a>
+            </li>
+          </ul>
+
+          <div class="col-lg-4 col-md-4 footer-social">
+            <a href="https://www.facebook.com/UofGlasgow/">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/UofGlasgow">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/popper.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/stellar.js"></script>
+    <script src="/static/js/jquery.lightbox.js"></script>
+    <script src="/static/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="/static/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/vendors/isotope/isotope-min.js"></script>
+    <script src="/static/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/static/vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="/static/vendors/counter-up/jquery.counterup.js"></script>
+    <script src="/static/js/mail-script.js"></script>
+    <script src="/static/vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="/static/vendors/swiper/js/swiper.min.js"></script>
+    <script src="/static/vendors/scroll/jquery.mCustomScrollbar.js"></script>
+    <script src="/static/js/theme.js"></script>
+  </body>
+</html>
