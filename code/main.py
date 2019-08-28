@@ -14,30 +14,24 @@ from flask import request
 import threading
 import time
 import cStringIO
+import pylab as plt
+import numpy as np
 
 from flask import Flask, make_response, request
 
 from numpy import *
 import numpy as np
 import json
-#import matplotlib.pyplot as plt
+from mnet_utilities import optimise_noise_thresh
+from scoring_functions import *
 
-#import matplotlib.pyplot
-#from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-#from matplotlib.figure import Figure
-# import matplotlib
-
-# #import pylab as plt
-# "from matplotlib import pyplot as plt
-
-# import PyQt4
-# #import base64
-# matplotlib.use('qt4agg')
 import matplotlib
 import matplotlib.pyplot as plt
 import base64
 import io
 import matplotlib.gridspec as gridspec
+import matplotlib.image as mpimg
+from optimal_thresh import compute_optimal_thresh
 
 
 class Optimize(object):
@@ -49,7 +43,7 @@ class Optimize(object):
     bestT = 0
     stop_threads = False
     picture = 0
-    #grid = {}
+    picture2 = 0
 
     def main(self, start_ms2_vals, stop_ms2_vals, step_ms2_vals, matched_peaks_array, tol_vals_array):
 
@@ -90,20 +84,14 @@ class Optimize(object):
                                 max_score = score
                 neg_hits[s] = (best, max_score)
                 n_done += 1
-#     if n_done == 2000:
-#         break
-            # if n_done % 100 == 0:
-            #   print n_done
 
             all_pos = {}
             all_neg = {}
             n_done = 0
+            import numpy as np
 
             ms2_vals = np.arange(start_ms2_vals, stop_ms2_vals, step_ms2_vals)
             print("parameters for ms2_vals  were accepted ")
-
-            # min_peaks = np.arange(
-            #     start_min_peaks, stop_min_peaks, step_min_peaks)
 
             min_peaks = matched_peaks_array
             print("parameters for min_peaks  were accepted ")
@@ -223,117 +211,64 @@ class Optimize(object):
             self.stop_threads = True
             print('thread killed')
 
-            # min shared ms2 peaks--------------------
-            fig = plt.figure(figsize=(10, 10))
-            fig.subplots_adjust(hspace=2)
-            img = io.BytesIO()
+            import matplotlib.pyplot as plt
 
+            fig = plt.figure(figsize=(6, 5*5))
+            fig.subplots_adjust(hspace=0.5)
             for mp in min_peaks:
+                fig.add_subplot(min_peaks.size, 1,  mp).title.set_text(
+                    'Min shared ms2 peaks = {}'.format(mp))
 
-                plt.imshow(grid[mp], aspect='auto')
                 pos = np.unravel_index(grid[mp].argmax(), grid[mp].shape)
                 plt.plot(pos[1], pos[0], 'ro')
                 plt.text(pos[1], pos[0], grid[mp][pos[0], pos[1]])
                 plt.xticks(range(len(tol_vals)), tol_vals)
                 plt.yticks(range(len(ms2_vals)), ms2_vals)
-                #count = mp
-                #print("This is count, need to replace mp")
-                # print(count)
-                plt.subplot(3, 1, mp).title.set_text(
-                    'Sylvia: min shared ms2 peaks = {}'.format(mp))
-                #count = mp+1
+                plt.imshow(grid[mp], aspect='auto')
 
+            img = io.BytesIO()
             plt.savefig(img, format='png')
-            plt.close()
 
             img.seek(0)
             graph_url = base64.b64encode(img.getvalue()).decode()
 
             self.picture = 'data:image/png;base64,{}'.format(graph_url)
 
+            print("I did graph 1")
+
             # # min shared ms2 peaks-------------------- Plot Number 2
 
-            # fig = plt.figure(figsize=(8, 8))
-            # fig.subplots_adjust(hspace=2, wspace=2)
-            # img = io.BytesIO()
+            img2 = io.BytesIO()
+            fig = plt.figure(figsize=(5, 5*5))
+            fig.subplots_adjust(hspace=0.5)
 
-            # for mp in all_pos:
-            #     eg = all_pos[mp][all_pos[mp].keys()[0]]
-            #     mean_diff = np.zeros_like(eg)
-            #     tot = 0
-            #     for s in all_pos[mp]:  # loop over spectra
-            #         mean_diff += all_pos[mp][s] - all_neg[mp][s]
-            #         tot += 1
-            #     mean_diff /= tot
-            #     plt.figure()
-            #     plt.imshow(mean_diff, aspect='auto')
-            #     best = 0
-            #     best_pos = None
-            #     for i, r in enumerate(mean_diff):
-            #         for j, c in enumerate(r):
-            #             if c > best:
-            #                 best_pos = (i, j)
-            #                 best = c
+            for mp in all_pos:
+                fig.add_subplot(min_peaks.size, 1, mp)
 
-            #     plt.subplot(2, 2,  mp)
+                eg = all_pos[mp][all_pos[mp].keys()[0]]
+                mean_diff = np.zeros_like(eg)
+                tot = 0
+                for s in all_pos[mp]:  # loop over spectra
+                    mean_diff += all_pos[mp][s] - all_neg[mp][s]
+                    tot += 1
+                mean_diff /= tot
+                best = 0
+                best_pos = None
+                for i, r in enumerate(mean_diff):
+                    for j, c in enumerate(r):
+                        if c > best:
+                            best_pos = (i, j)
+                            best = c
 
-            # plt.savefig(img, format='png')
-            # plt.close()
+                plt.imshow(mean_diff, aspect='auto')
 
-            # img.seek(0)
-            # graph_url2 = base64.b64encode(img.getvalue()).decode()
+            plt.savefig(img2, format='png')
+            img2.seek(0)
+            graph_url2 = base64.b64encode(img2.getvalue()).decode()
 
-            # self.picture2 = 'data:image/png;base64,{}'.format(graph_url2)
+            self.picture2 = 'data:image/png;base64,{}'.format(graph_url2)
 
-            # # min shared ms2 peaks-------------------- Plot Number 3
-
-            # fig = plt.figure(figsize=(8, 8))
-            # fig.subplots_adjust(hspace=2, wspace=2)
-            # img = io.BytesIO()
-
-            # import pylab as plt
-            # import numpy as np
-
-            # for i, m in enumerate(min_match_vals):
-            #     plt.figure()
-            #     plt.plot(ms2_vals, np.array(
-            #         all_neg_curves[i]).T, color=[0.3, 0, 0, 0.3])
-            #     plt.plot(ms2_vals, np.array(
-            #         all_pos_curves[i]).T, color=[0.0, 0.0, 0.3, 0.3])
-            #     plt.figure()
-            #     plt.plot(ms2_vals, all_auc_vals[i])
-            #     print max(all_auc_vals[i])
-            #     plt.subplot(2, 2,  mp)
-
-            # plt.savefig(img, format='png')
-            # plt.close()
-
-            # img.seek(0)
-            # graph_url3 = base64.b64encode(img.getvalue()).decode()
-
-            # self.picture3 = 'data:image/png;base64,{}'.format(graph_url3)
-
-            # # min shared ms2 peaks-------------------- Plot Number 4
-
-            # fig = plt.figure(figsize=(8, 8))
-            # fig.subplots_adjust(hspace=2, wspace=2)
-            # img = io.BytesIO()
-
-            # plt.figure()
-            # handles = []
-            # for i, a in enumerate(all_auc_vals):
-            #     h, = plt.plot(ms2_vals, a, label=min_match_vals[i])
-            #     handles.append(h)
-            #     plt.subplot(2, 2,  mp)
-            # plt.legend(handles=handles)
-
-            # plt.savefig(img, format='png')
-            # plt.close()
-
-            # img.seek(0)
-            # graph_url4 = base64.b64encode(img.getvalue()).decode()
-
-            # self.picture4 = 'data:image/png;base64,{}'.format(graph_url4)
+            print("I did graph 2")
 
         t1 = threading.Thread(target=run)
         t1.start()
@@ -342,6 +277,9 @@ class Optimize(object):
 
     def print_graph(self):
         return self.picture
+
+    def print_graph2(self):
+        return self.picture2
 
     def get_OptimalParemeters(self):
         print(self.OptimalParemeters)
@@ -362,10 +300,6 @@ class Optimize(object):
     def get_t(self):
         print(self.bestT)
         return self.bestT
-
-    def get_loopNumber(loopNumber):
-
-        return self.loopNumber
 
     def stop_parameters_returning(self):
         while True:

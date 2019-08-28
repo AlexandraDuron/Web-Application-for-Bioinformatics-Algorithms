@@ -34,9 +34,10 @@ import sys
 import os
 import pylab as plt
 import matplotlib.pyplot as plt
-#from graph import build_graph
+
 
 sys.path.append('C:/Users/ALEXANDRA/workspace/molnet-master/files')
+
 
 app = Flask(__name__, instance_path=os.path.join(
     os.path.abspath(os.curdir), 'instance'), instance_relative_config=True)
@@ -90,14 +91,6 @@ def my_link():
     step_ms2_vals = int(request.form['text2'])
     print(step_ms2_vals)
 
-    # start_min_peaks = int(request.form['text3'])
-    # print(start_min_peaks)
-    # stop_min_peaks = int(request.form['text4'])
-    # print(stop_min_peaks)
-    # step_min_peaks = int(request.form['text5'])
-    # print(step_min_peaks)
-
-    # List input for minimum number of matched peaks
     input_list_matched_peaks = str(request.form['text3'])
     P = []
     P = input_list_matched_peaks.split(',')
@@ -135,16 +128,14 @@ def my_link():
 
     msg = Message('Your results are: ' 'Minimum number of matched peaks:' + min_peaks_values + 'MS2 tolerance:' + tol_values + 'Minimum MS2 intensity:' + ms2_values, sender='contact@monlet.com',
                   recipients=['2412650o@student.gla.ac.uk'])
-    # msg = Message('Your results are:', sender='contact@monlet.com',
-    # recipients = ['2412650o@student.gla.ac.uk'])
 
     mail.send(msg)
 
     graph1_url = d.print_graph()
-    # d.print_first_plot()
+    graph2_url = d.print_graph2()
 
     print("it worked")
-    return render_template("results.html", OptimalParemeters=d.get_OptimalParemeters(), BestThreshold=d.get_BestThreshold(), min_peaks=d.get_mp(), tol_vals=d.get_t(), ms2_vals=d.get_m(), graph1=graph1_url)
+    return render_template("results.html", OptimalParemeters=d.get_OptimalParemeters(), BestThreshold=d.get_BestThreshold(), min_peaks=d.get_mp(), tol_vals=d.get_t(), ms2_vals=d.get_m(), graph1=graph1_url, graph2=graph2_url)
 
 
 @app.route('/_stuff', methods=['GET'])
