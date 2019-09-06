@@ -1,44 +1,33 @@
+<!-- About page provides a description of the functionality of the system -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="icon" href="/static/img/favicon.png" type="image/png" />
+    <!-- Title  -->
     <title>Molecular Networking Parameter Optimisation</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/static/css/bootstrap.css" />
     <link rel="stylesheet" href="/static/vendors/linericon/style.css" />
     <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
-    <link
-      rel="stylesheet"
-      href="/static/vendors/owl-carousel/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/static/vendors/nice-select/css/nice-select.css"
-    />
+    <link rel="stylesheet" href="/static/vendors/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css"/>
+    <link rel="stylesheet" href="/static/vendors/nice-select/css/nice-select.css"/>
     <link rel="stylesheet" href="/static/vendors/animate-css/animate.css" />
     <link rel="stylesheet" href="/static/vendors/popup/magnific-popup.css" />
     <link rel="stylesheet" href="/static/vendors/swiper/css/swiper.min.css" />
-    <link
-      rel="stylesheet"
-      href="/static/vendors/scroll/jquery.mCustomScrollbar.css"
-    />
+    <link rel="stylesheet" href="/static/vendors/scroll/jquery.mCustomScrollbar.css"/>
     <!-- main css -->
     <link rel="stylesheet" href="/static/css/style.css" />
     <link rel="stylesheet" href="/static/css/responsive.css" />
   </head>
 
   <body>
-    <!--================Offcanvus Menu Area =================-->
+    <!--================Menu Area =================-->
     <div class="side_menu">
       <a class="logo" href="#">
         <img src="\static\img\banner\logo-menu.png" alt="" />
@@ -52,14 +41,13 @@
         </li>
       </ul>
     </div>
-    <!--================End Offcanvus Menu Area =================-->
+    <!--================End  Menu Area =================-->
 
     <!--================Header Menu Area =================-->
     <header class="header_area home_menu">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand logo_h" href="{{ url_for('index') }}">
               <img src="static\img\banner\logo.png" alt="" />
             </a>
@@ -76,7 +64,6 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div
               class="collapse navbar-collapse offset"
               id="navbarSupportedContent"
@@ -98,28 +85,22 @@
 
     <!--================Canvus Menu Area =================-->
     <div class="canvus_menu">
-      <div class="container">
-        <div class="float-right">
-          <div class="toggle_icon">
-            <span></span>
+        <div class="container">
+          <div class="float-right">
+            <div class="toggle_icon">
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--================End Canvus Menu Area =================-->
+      <!--================End Canvus Menu Area =================-->
 
     <!--================ About Area =================-->
     <section class="menu_area">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div class="main_title position-relative">
-              <h1>About</h1>
-              <hr />
-              <div class="round-planet planet">
-                <div class="round-planet planet2"></div>
-              </div>
-            </div>
+            
           </div>
         </div>
         <div class="row menu_inner">
@@ -129,31 +110,25 @@
                 <li>
                     <p></p>
                     
-
-                  <h4>
-                    Mass Spectrometry
+                  <h4 >
+                    About
                   </h4>
                   <p></p>
+                  <!-- Justify text -->
                   <p align="justify">
-                    Mass Spectrometry allows an accurate measurement of the mass
-                    of different molecules within a sample. Proteins which
-                    account for large biomolecules, are identifiable by mass.
-                    Thanks to Mass Spectrometry, it is possible to identify
-                    molecules in a mixture, detect impurities in a sample,
-                    analyze a purified protein, or study the protein content of
-                    a sample of cells. 
+                    The objective of this project is to build a web application that implements the algorithms in relation to Parameter Optimization, of a program called Molnet. Molnet is a Molecular Networking prototype, which organizes Mass Spectrometry (MS/ MS) data based on its chemical similarity.
                     <p></p>
-                    Mass Spectrometry, fragments molecules based on their 
-                    chemical properties in the gas phase. Then,two related 
-                    molecules are likely to display similar fragments of ion spectra. 
-                    <p></p>
+                    This web application allows users to upload a file with .mzML extension, which is a standardized format for Mass Spectrometry data. Users have the option of choosing the values, and the range of the parameters they want to process. The values of the optimized parameters are shown in a results page.
 
-                    Molecular networking utilizes the chemistry 
-                    of molecules to organize the data as a relational
-                    spectral network. This data organizational tool is applicable
-                    across diverse fields such as; the discovery of therapeutic leads, 
-                    monitoring drug metabolism, clinical diagnostics, and emerging
-                    applications in precision medicine. [1]
+                    Molecular Networking is a data organizational approach that arranges Mass Spectrometry (MS/MS) data. It reads a file containing spectra data. Then, it goes through filtering steps to make a clear separation between the spectra, depending on the similarity of its chemical properties.
+
+                    
+                    <p></p>
+<p></p>    
+<p></p>                    
+
+                    [1] Quinn, Robert & Nothias, Louis-Félix & Vining, Oliver & Meehan, Michael & Esquenazi, Eduardo & Dorrestein, Pieter. (2016). Molecular Networking As a Drug Discovery, Drug Metabolism, and Precision Medicine Strategy. Trends in Pharmacological Sciences. 38. 10.1016/j.tips.2016.10.011
+
                   </p>
                 </li>
               </ul>
@@ -166,19 +141,16 @@
                 <li>
                     <p></p>
 
-                  <h4>
+                  <h4 style="color: #fff;">
                     Molecular Networking
                   </h4>
                   <p></p>
 
-                  <p align="justify">
-                    Molecular Networking utilizes filtering steps to make a
-                    clear separation between MS2 spectra clusters. In this
-                    process, only the most relevant similar scores are selected.
-                    According to the filtering values selected, some scores are
-                    arbitrarily deleted and part of the information is ignored.
-                    The selection of these values requires time- consuming
-                    parameters optimization.
+                  <p align="justify">                  
+                    After, it puts the spectra that belongs to the same molecule into groups. A Molecular Network is comprised by nodes that contain a group of similar spectra. This spectra makes up a molecule. Nodes are connected by edges. 
+                    <p></p>
+                    This data organizational tool aims to find spectra of molecules that belong to something already known, or to find completely new molecules. It is applicable across diverse fields such as; human disease research including autism, coronary artery disease, and hypertension. In addition, it is utilized in the discovery of therapeutic leads, monitoring drug metabolism, and emerging applications in precision medicine.  [1].
+                    
                   </p>
                 </li>
               </ul>
@@ -188,95 +160,6 @@
       </div>
     </section>
     <!--================End About Area =================-->
-
-    <!--================ Team Area =================-->
-    <section class="menu_area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="main_title position-relative">
-              <h1>Team</h1>
-              <p></p>
-
-              <hr />
-              <div class="round-planet planet">
-                <div class="round-planet planet2"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row menu_inner">
-          <div class="container">
-            <div class="testi_slider owl-carousel">
-              <div class="item">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img src="/static/img/testimonials/testi-1.jpg" alt="" />
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="testi_text">
-                      <h4></h4>
-                      <h5>Web Developer, Google</h5>
-                      <p>
-                        “Who are in extremely love with eco friendly system.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.”
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img src="/static/img/testimonials/testi-1.jpg" alt="" />
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="testi_text">
-                      <h4>Researchers name</h4>
-                      <h5>Web Developer, Google</h5>
-                      <p>
-                        “Who are in extremely love with eco friendly system.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.”
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img src="/static/img/testimonials/testi-1.jpg" alt="" />
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="testi_text">
-                      <h4>Researchers name</h4>
-                      <h5>Web Developer, Google</h5>
-                      <p>
-                        “Who are in extremely love with eco friendly system.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.”
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================End Team Area =================-->
 
     <!--================ Start footer Area  =================-->
     <footer class="footer-area p_120">
@@ -295,7 +178,6 @@
               <a> All rights reserved | 2019</a>
             </li>
           </ul>
-
           <div class="col-lg-4 col-md-4 footer-social">
             <a href="https://www.facebook.com/UofGlasgow/">
               <i class="fa fa-facebook"></i>

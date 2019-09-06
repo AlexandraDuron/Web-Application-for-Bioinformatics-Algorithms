@@ -1,15 +1,12 @@
+<!-- Selection page -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-      <link
-      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
+      
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 
     <!-- Required meta tags -->
 
@@ -17,6 +14,10 @@
     <script src="/static/upload.js"></script>
 
     <!-- Latest compiled and minified CSS -->
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -32,7 +33,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- Latest compiled and minified JavaScript -->
+    <!-- JavaScript for buttons -->
     <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
       integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
@@ -40,19 +41,12 @@
     ></script>
 
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <link
-      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css"/>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="icon" href="/static/img/favicon.png" type="image/png" />
+    <!-- Title -->
     <title>Molecular Networking Parameter Optimisation</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/static/css/bootstrap.css" />
@@ -86,7 +80,7 @@
       
       <div id="loading"></div>
       <div id="content">
-    <!--================Offcanvus Menu Area =================-->
+    <!--================Menu Area =================-->
     <div class="side_menu">
       <a class="logo" href="#">
         <img src="\static\img\banner\logo-menu.png" alt="" />
@@ -100,14 +94,13 @@
         </li>
       </ul>
     </div>
-    <!--================End Offcanvus Menu Area =================-->
+    <!--================End Menu Area =================-->
 
     <!--================Header Menu Area =================-->
     <header class="header_area home_menu">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand logo_h" href="{{ url_for('index') }}">
               <img src="static\img\banner\logo.png" alt="" />
             </a>
@@ -124,7 +117,6 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div
               class="collapse navbar-collapse offset"
               id="navbarSupportedContent"
@@ -143,103 +135,21 @@
       </div>
     </header>
     <!--================Header Menu Area =================-->
-
     <!--================Canvus Menu Area =================-->
     <div class="canvus_menu">
-      <div class="container">
-        <div class="float-right">
-          <div class="toggle_icon">
-            <span></span>
+        <div class="container">
+          <div class="float-right">
+            <div class="toggle_icon">
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--================End Canvus Menu Area =================-->
+      <!--================End Canvus Menu Area =================-->
 
-    <!--================ Selection Area =================-->
-    <section>
-      <!--================ Grid for combobox =================-->
-      <!-- <p></p>
-      <p style="color: #fff">sdfg</p>
-      <p></p>
-      <p style="color: #fff">sdfg</p>
+    <!-- Parameters input section-->
 
-      <div class="container">
-        <div class="page-header">
-          <h3>
-            Please select the parameters you want to optimize.
-          </h3>
-        </div>
-        <div class="row grid-divider">
-          <div class="col-sm-4">
-            <div class="col-padding">
-              <select>
-                <option selected>Parameter</option>
-                <option>Minimum number of matched peaks</option>
-                <option>ms2 tolerance</option>
-                <option>min ms2 intensity</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="col-padding">
-              <select>
-                <option selected>Parameter</option>
-                <option>Minimum number of matched peaks</option>
-                <option>MS2 tolerance</option>
-                <option>Minimum ms2 intensity</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="col-padding">
-              <select>
-                <option selected>Parameter</option>
-                <option>Minimum number of matched peaks</option>
-                <option>ms2 tolerance</option>
-                <option>min ms2 intensity</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </section>
-
-    <!-- <section>
-      <div class="container">
-        <div class="page-header"></div>
-        <div class="row grid-divider">
-          <div class="col-sm-4">
-            <div class="col-padding">
-              <p></p>
-              <p style="color: #fff">sdfg</p> -->
-
-              <!--================Start button =================-->
-
-              <!-- <form name="Form1" action="/my-link"  enctype=multipart/form-data  onclick="loading();" >
-                <input
-                  class="btn submit_btn form-control"
-                  type="submit"
-                  value="START"
-                />
-              </form> -->
-
-                  
-                      <!-- <h3>Type anything:</h3>
-                      <p>
-                      <form action="." method="POST">
-                          <input type="text" name="anything" placeholder="Type anything here">
-                          <input type="submit" name="anything_submit" value="Submit" onclick="loading();">
-                      </form>
-                      </p> -->
-<!--                       
-                      <form name="Form1" action="/my-link"  enctype=multipart/form-data method="POST"   >
-                        <input
-                          class="btn submit_btn form-control"
-                          type="submit"
-                          value="START"
-                          onclick="loading();"
-                        /> -->
+    
 
                         <style>
                        .myForm input {
@@ -248,10 +158,10 @@
                         
                         </style>
                         
-                        <form action="/my-link"  enctype=multipart/form-data method="POST">
+                        <form action="/optimize"  enctype=multipart/form-data method="POST">
                           
 
-                          <!-- Primera selección de parametros empieza aqui -->
+                          <!-- Enter values for Minimum MS2 intensity -->
                           <div class="container">
                               <div class="page-header">
                                 
@@ -259,7 +169,7 @@
                                         <p style="color: #fff">sdfg</p><p></p>
 
                                         <h4>
-                                            Select values for Minimum MS2 intensity.
+                                            Select Start, Stop and Step integer values for Minimum MS2 intensity. 
                                           </h4>
                               </div>
                               <div class="row grid-divider">
@@ -282,23 +192,19 @@
                             </div>
                           </section>
 
-                          <!-- Primer selección de parametros termina aqui -->
-
-
-                          <!-- Seguknda seleccion de paramtros empieza aqui -->
-
+                          <!-- Enter values for minimum number of matched peaks -->
 
                           <div class="container">
                               <div class="page-header">
                                   <h4>
-                                    Select values for the minimum number of matched peaks.
+                                    Select integer values for the list of minimum number of matched peaks.
 
                                     </h4>
                               </div>
                               <div class="row grid-divider">
                                 <div class="col-sm-4">
                                   <div class="col-padding">
-                                      <input name="text3" placeholder="Separate values with ' , '3"/>
+                                      <input name="text3" placeholder="Separate values with ' , ' "/>
                                   </div>
                                 </div>
                                 <div >
@@ -313,16 +219,12 @@
                             </div>
                           </section>
 
-
-                          <!-- Segunda seleccion de parametros termina aqui -->
-
-                          <!-- Tercera seleccion de paramteros empieza aqui -->
-
+                          <!-- Enter values for MZ tolerance -->
 
                           <div class="container">
                               <div class="page-header">
                                   <h4>
-                                      Select values for MZ tolerance. 
+                                      Select float values for the list of MZ tolerance. 
 
                                     </h4>
                               </div>
@@ -337,9 +239,8 @@
                               </div>
                             </div>
                           </section>
-                          <!-- Tercera seleccion de parametros termina aqui -->
 
-                            <!-- caja para el boton  -->
+                            <!-- Start button  -->
                             <div class="container">
                                 
                                 <div >
@@ -348,7 +249,108 @@
                                         <p></p>
                                         <p style="color: #fff">sdfg</p>
                                         
-                                        <input type="submit"  value="START" class="btn submit_btn form-control" onclick="loading();"/>
+                                        <input type="submit"  value="START" class="button" onclick="loading();"/>
+
+
+                                        <style>
+                                        
+                                        /*************************
+        button
+*************************/
+
+.button {
+    font-size: 14px;
+    text-align: center;
+    border: 0px solid transparent;
+    background: #db2d2e;
+    color: #ffffff;
+    display: inline-block;
+    text-transform: capitalize;
+    vertical-align: middle;
+    padding: 8px 20px;
+    -ms-transform: perspective(1px) translateZ(0);
+    -o-transform: perspective(1px) translateZ(0);
+    -moz-transform: perspective(1px) translateZ(0);
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    -ms-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -ms-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #323232;
+    -ms-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -ms-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -ms-transition-property: transform;
+    -moz-transition-property: transform;
+    -o-transition-property: transform;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -ms-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.button:hover,
+.button:focus,
+.button:active {
+    color: #ffffff;
+}
+
+.button:hover:before,
+.button:focus:before,
+.button:active:before {
+    -moz-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -moz-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+    -ms-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+    -o-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+}
+
+
+
+                                        </style>
+
+
+
+
 
                                     </div>
                                   </div>
@@ -361,14 +363,8 @@
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-
-                            <!-- caja para el boton termina -->
-                         
-                            
+                              </div> 
                         </form>
-
-
 
                         <style>@media ( min-width: 768px ) {
                             .grid-divider {
@@ -389,39 +385,25 @@
                                 padding: 0 15px;
                             }
                         }</style>
-                        
+                      
+                      <!-- Hide and display wating message  -->
                       </form>
-                      <script type="text/javascript">// <![CDATA[
+                      <script type="text/javascript">
                         function loading(){
                             $("#loading").show();
                             $("#content").hide();  
                             $("#formImg").show();    
-
-                            // Send data from text box
-                            //document.forms["text"].submit();
-
-
                             document.getElementById('my').style.visibility='visible'; 
-
                             var intervalID = setInterval(update_values,10000);
-
-
                             function update_values() {
                                   $.getJSON($SCRIPT_ROOT + '/_stuff',
-                 
                                 function(data) {
                                 $('#result').text(data.result);
                                 console.log(data)
                                 });
-        
                                 };
-  
-
-
                         }
-                // ]]></script>
-                    
-  
+                </script>
                   <div>  </div>
       
             <style>
@@ -434,38 +416,8 @@
     }
           </style> 
 
-          
-          
-
-
-              
-
-            <!-- </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="col-padding"></div>
-
-          </div>
-          <div class="col-sm-4">
-            <div class="col-padding"></div>
-          </div>
-        </div> -->
-      
-        <!-- <img src ="\static\img\wait.gif" id="my" width="310" height="392" style="position: absolute; top:92px; left:375px; visibility:hidden"/>
-        <script type="text/javascript">
-          function tend() {
-            document.getElementById('my').style.visibility='visible';
-          }
-          
-        </script>
-        <input type="button" onclick="tend()" value="back"> -->
-
-        
-        
-      
-
     </section>
-    <!-- <igm src="\static\img\wait.gif" id="formImg" style="display:none;" /> -->
+  
 
     <p></p>
     <p style="color: #fff">sdfg</p>
@@ -505,7 +457,6 @@
     </footer>
     <!--================ End footer Area  =================-->
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/static/js/jquery-3.2.1.min.js"></script>
     <script src="/static/js/popper.js"></script>
@@ -527,10 +478,9 @@
   </div>
   <!-- <img src ="\static\img\wait.gif" id="my" width="310" height="392" style="position: absolute; top:92px; left:375px; visibility:hidden"/> -->
 
+<!-- Wating message -->
+
   <div  id="my" style= "visibility:hidden">
-
-
-
     <script type="text/javascript"
   src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -538,29 +488,13 @@
 </script>
 
 <script type="text/javascript">
-  // var intervalID = setInterval(update_values,1000);
-  
-  //    function update_values() {
-  //          $.getJSON($SCRIPT_ROOT + '/_stuff',
-                 
-  //        function(data) {
-  //          $('#result').text(data.result);
-  //          console.log(data)
-  //        });
-        
-  //      };
      
-      
-     
-      
   </script>
   
-      <span id="result">?</span>
+      <span id="result"></span>
   <script>
   document.getElementById("result").innerHTML;
   </script>
-
-
     <div class="loader" >
         <span></span>
         <span></span>
@@ -640,13 +574,6 @@
           }
         }
       </style>
-      
-
-
 </div>
-
-
-
-
 </body>
 </html>
