@@ -1,5 +1,9 @@
 # This class behaves such as a main method, it runs the parameter optimization process.
 
+#This class was built by Claudia Ortiz-Duron
+#The code to carry out the parameter optimization process was written by
+#Dr. Simon Rogers 
+
 # Dependencies that Molnet needs to run
 from mnet import *
 from mnet_utilities import optimise_noise_thresh
