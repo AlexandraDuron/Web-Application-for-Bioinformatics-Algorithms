@@ -1,3 +1,5 @@
+#This class was written by Dr. Simon Rogers
+
 from copy import deepcopy
 import os
 import glob
