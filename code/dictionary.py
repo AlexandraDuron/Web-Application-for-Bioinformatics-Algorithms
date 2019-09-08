@@ -5,6 +5,11 @@
 # called neg_hits. Both methods are re called in the Optimize class
 # and stored in variables.
 
+
+#This class was built by Claudia Ortiz-Duron
+#The code to map dicitionaries was written by
+#Dr. Simon Rogers 
+
 # Dependencies of Molnet that the code needs to run
 from scoring_functions import *
 from mnet import *
