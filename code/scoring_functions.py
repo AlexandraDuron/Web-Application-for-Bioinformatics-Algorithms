@@ -1,3 +1,6 @@
+#This class was built by Dr. Simon Rogers 
+
+
 from __future__ import print_function
 
 
