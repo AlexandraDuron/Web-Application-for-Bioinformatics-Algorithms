@@ -6,6 +6,11 @@
 # plots the Minimum MS2 intensity parameter with the MZ tolerance,
 # and the second one plots the mean difference.
 
+#This class was built by Claudia Ortiz-Duron
+#The code that defines what is going to be plotted was written by
+#Dr. Simon Rogers 
+
+
 
 # Dependencies to make the graphs
 import matplotlib.pyplot as plt
