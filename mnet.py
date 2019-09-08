@@ -1,3 +1,5 @@
+
+#This class was built by Dr. Simon Rogers
 #lOADS THE FILE AND DOES THE MOLECULAR NETWORKING PROCESS
 
 from __future__ import print_function
