@@ -1,6 +1,10 @@
 # This class implements a method called compute_optimal_thresh.
 # Which computes scores for every combination of parameters.
 
+#This class was built by Claudia Ortiz-Duron
+#The code that computes scores for every combination of parameters was written by
+#Dr. Simon Rogers 
+
 # Numpy is a fundamental package for scientific computing with Python
 import numpy as np
 
