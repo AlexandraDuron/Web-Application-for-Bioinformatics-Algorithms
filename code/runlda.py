@@ -1,3 +1,6 @@
+#This class was built by Dr. Simon Rogers 
+
+
 LDA_CODE_PATH = '/Users/simon/git/lda/code'
 MOTIF_DB_PATH = '/home/simon/git/motifdb'
 
