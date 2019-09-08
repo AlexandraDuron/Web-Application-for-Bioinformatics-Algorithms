@@ -2,6 +2,10 @@
 # This class contains a method to Re-organise results to make them easier to analyse.
 # It returns a dictionary with the restructured results
 
+#This class was built by Claudia Ortiz-Duron
+#The code to Re-organise results to make them easier to analyse was written by
+#Dr. Simon Rogers 
+
 
 class Restructure():
 
