@@ -1,3 +1,6 @@
+#This class was built by Dr. Simon Rogers 
+
+
 # some code for spectral library things
 
 from scoring_functions import fast_cosine, fast_cosine_shift
