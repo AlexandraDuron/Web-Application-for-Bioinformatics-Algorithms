@@ -1,3 +1,5 @@
+#This class was written by Claudia Ortiz-Duron
+
 # Dependencies
 import sys
 import os
