@@ -67,7 +67,7 @@ def main(argv):
      # argv[0] gives the name of the script               
     input_dir = argv[0]
     output_prefix = argv[1]
-    # Creo que esta asignando valores a "min_ms2_intensity=  y al nombre del script
+   
     options['input_dir'] = input_dir
     options['output_prefix'] = output_prefix
 
