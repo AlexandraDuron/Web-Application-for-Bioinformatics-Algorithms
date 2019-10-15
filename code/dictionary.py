@@ -6,7 +6,7 @@
 # and stored in variables.
 
 
-#This class was built by Claudia Ortiz-Duron
+#This class was built by me
 #The code to map dicitionaries was written by
 #Dr. Simon Rogers 
 
