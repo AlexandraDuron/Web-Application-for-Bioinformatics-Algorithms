@@ -1,4 +1,4 @@
-#This class was written by Claudia Ortiz-Duron
+#This class was written by me
 
 # Dependencies
 import sys
