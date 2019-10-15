@@ -6,7 +6,7 @@
 # plots the Minimum MS2 intensity parameter with the MZ tolerance,
 # and the second one plots the mean difference.
 
-#This class was built by Claudia Ortiz-Duron
+#This class was built by me
 #The code that defines what is going to be plotted was written by
 #Dr. Simon Rogers 
 
